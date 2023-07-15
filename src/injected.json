@@ -1,17 +1,17 @@
 {
   "keywords": [],
-  "title": "Premier Art - Cabinet d'architecture",
-  "description": "Premier Art - Cabinet d'architecture, realise vos projets de vie.",
+  "title": "Nextjs boilderplate using tailwindcss",
+  "description": "Nextjs boilderplate using tailwindcss",
   "manifest": {
-    "projectShortName": "Premier Art",
+    "projectShortName": "Nextjs boilderplate using tailwindcss",
     "themeColor": "#ffffff",
-    "url": "https://www.preview.premierart.be/",
-    "description": "Cabinet d'architectes",
+    "url": "https://www.example.com/",
+    "description": "Nextjs boilderplate using tailwindcss",
     "display": "standalone",
     "orientation": "portrait",
     "backgroundColor": "#ffffff"
   },
-  "gtag": "G-E5E0PHEMCL",
+  "gtag": "G-xxxxxxxxxx",
   "colors": {
     "global": "#227D89",
     "globalText": "#ffffff",
@@ -83,7 +83,7 @@
   ],
   "sla": [
     {
-      "title": "@ 2023 Premier Art",
+      "title": "@ 2023 Clevertech",
       "link": "/"
     },
     {
@@ -101,14 +101,14 @@
   ],
   "address": {
     "url": "https://goo.gl/maps/xS8che1DjJgBenVd7",
-    "address": "Av. Roi Albert I 64, 1780 Wemmel, Belgique"
+    "address": "Av. de la Couronne 227, 1050 Ixelles"
   },
-  "tel": "+32 456 12 34 56",
-  "email": "info@premierart.be",
-  "tva": "BE 0123.456.789",
+  "tel": "+32 2 555 55 55",
+  "email": "example@example.com",
+  "tva": "BE 0000 000 000",
   "locales": ["fr", "nl", "en"],
   "author": {
-    "name": "Crackn",
-    "url": "https://www.crackn.co"
+    "name": "Clevertech",
+    "url": "https://www.clevertech.be"
   }
 }

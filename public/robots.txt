@@ -2,8 +2,10 @@
 User-agent: *
 Allow: /
 
+# TODO: change host to your own domain
 # Host
-Host: https://premierart.be
+Host: http://example.com/
 
+# TODO: change host to your own domain
 # Sitemaps
-Sitemap: https://premierart.be/sitemap.xml
+Sitemap: http://example.com/sitemap.xml

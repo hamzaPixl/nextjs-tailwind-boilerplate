@@ -1,116 +1,65 @@
-# Premier Art
+# Create Tailwind CSS Boilerplate
 
-[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/clevertech-be/premier-art/blob/master/LICENSE)
-[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)](https://github.com/clevertech-be/premier-art/commits/master)
+A bare-bones Tailwind CSS boilerplate.
 
-<br />
-<p align="center">
-  <h3 align="center">Premier Art</h3>
+It creates a simple React template with [Tailwind CSS][tailwind] support,
+served by [Flowbite][flowbite] and using [Nextjs][nextjs] as framework.
 
-  <p align="center">
-    <br />
-    <a href="https://github.com/clevertech-be/premier-art/blob/master/README.md"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://premier-art.be/">View Demo</a>
-    ·
-    <a href="https://github.com/clevertech-be/premier-art/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/clevertech-be/premier-art/issues">Request Feature</a>
-  </p>
-</p>
+## Getting started
 
-<details open="open">
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#built with">Built with</a></li>
-    <li><a href="#contributting">Contributing</a></li>
-    <li><a href="#liscence">Liscence</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#link">Link</a></li>
-  </ol>
-</details>
+### Requirements
 
-<br>
+[Yarn][yarn] is suggested, but not required. The project will be set up with
+[npm][npm] if Yarn is not found.
 
-## Author
+### Create boilerplate
 
-Hamza Mounir & Rachid Asli
+```bash
+yarn create nextjs-tailwind-boilerplate
 
-## Contributing
+# or
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+npx create-nextjs-tailwind-boilerplate
+```
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Follow instructions at the prompt to create your project:
 
-## License
+```bash
+? Name your project root directory my-project
+  ✔ Create directory structure
+  ✔ Create project files
+  ✔ Create templates
+  ✔ Set up dependencies
+```
 
-Distributed under the MIT License. See `LICENSE` for more information.
+### Run server
 
-## Contact
+```bash
+yarn dev
+```
 
-Hamza Mounir - hamza@clevertech.be
-Rachid Asli - rachid@clevertech.be
+Open your favorite text editor and start coding!
 
-## Link
+## Build for production
 
-## TimeSheet
+```bash
+yarn build
+```
 
-### 20/07 - 5 hours
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- [x] newsletter
-- [x] button
-- [x] header
-- [x] footer
-- [x] contact card
-- [x] team card
+You can start editing the page by modifying `src/pages/index.js`. The page auto-updates as you edit the file.
 
-# 21/07 - 4 hours
+You can start editing the json configuration by modifying `src/pages/injected.json`. The page auto-updates as you edit the file.
 
-- [x] contact form
-- [x] mission card
-- [x] quote card
-- [x] project card
-- [x] mission
-- [x] home
-- [x] contact
-- [x] about
+Build files will end up in `/dist`.
 
-# 22/07 - 5 hours
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository={{injected.settings.repository.url}}&utm_source=github&utm_medium={{injected.settings.repository.name}}&utm_campaign=devex-cs)
 
-- [x] & various fixes on previous component / pages
-- [x] projects
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/import?s={{injected.settings.repository.url}}&hasTrialAvailable=1&showOptionalTeamCreation=false&project-name={{injected.settings.repository.name}}&framework=nextjs&totalProjects=1&remainingProjects=1)
 
-# 23/07 - 3 hours
-
-- [x] project detail
-- [x] lazy load
-- [x] no more free text
-
-# 23/07 - 3 hours
-
-- [x] multiple fix for responsive
-
-# august - 8 hours
-
-# 13/08 - 15/08 - 9
-
-[x] design system
-[x] font fix
-[x] fix footer coponent
-[x] fix header coponent
-[x] fix newsletter coponent
-[x] fix quote coponent
-[x] fix hero coponent
-[x] fix about coponent
-[x] fix cookie coponent
-[x] fix home page
-[x] fix projects page
-[x] fix contact page
-[x] fix about page
-[x] fix mission page
-[x] fix project detail page
+[tailwind]: https://tailwindcss.com
+[nextjs]: https://parceljs.org
+[flowbite]: https://flowbite.com/
+[yarn]: https://yarnpkg.com
+[npm]: https://www.npmjs.com
