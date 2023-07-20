@@ -26,5 +26,5 @@ export const useLocale = () => {
     },
     [router],
   )
-  return { locale: router.locale, switchLocale, messages: flattenedMessages }
+  return { locale: router.locale || 'en', switchLocale, messages: flattenedMessages }
 }

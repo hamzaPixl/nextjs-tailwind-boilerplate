@@ -8,6 +8,7 @@ export default function IndexPage() {
   return (
     <Layout>
       <SEO />
+      <h1>{t('title')}</h1>
     </Layout>
   )
 }
