@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+
+# TODO: change host to your own domain
+# Host
+Host: http://example.com/
+
+# TODO: change host to your own domain
+# Sitemaps
+Sitemap: http://example.com/sitemap.xml
