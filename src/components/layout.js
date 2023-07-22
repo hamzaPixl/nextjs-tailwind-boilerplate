@@ -9,11 +9,9 @@ export default function Layout({ children }) {
     <>
       <main>
         <SEO />
-        <Container>
-          <Header />
-          {children}
-          <Footer />
-        </Container>
+        <Header />
+        <Container>{children}</Container>
+        <Footer />
       </main>
     </>
   )

@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className='mt-12 w-full h-28 flex flex-row justify-between items-center text-background text-xs font-bold leading-normal'>
+    <footer className='h-20 w-full px-36 my-12 flex flex-row justify-between items-center text-background text-xs font-bold leading-normal'>
       <div className='flex flex-row items-center'>
         {injected.socials.map((item, index) => (
           <a key={index} className='text-background' href={item.link}>
