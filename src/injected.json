@@ -3,12 +3,11 @@
   "title": "Premier Art - Cabinet d'architecture",
   "manifest": {
     "projectShortName": "Premier Art",
-    "themeColor": "#000000",
+    "themeColor": "#ffffff",
     "url": "https://www.preview.premierart.be/",
     "description": "Cabinet d'architectes",
     "display": "standalone",
     "orientation": "portrait",
-    "copyright": "Tous droits reservés",
     "backgroundColor": "#ffffff"
   },
   "gtag": "G-NLFE8BB8S7",
@@ -20,31 +19,42 @@
     "overlay": "#000000",
     "background": "#000000"
   },
+  "socials": [
+    {
+      "title": "facebook",
+      "link": "https://www.facebook.com"
+    },
+    {
+      "title": "instagram",
+      "link": "https://www.instagram.com"
+    },
+    {
+      "title": "linkedin",
+      "link": "https://www.linkedin.com"
+    }
+  ],
+  "sla": [
+    {
+      "title": "@ 2023 Premier Art",
+      "link": "https://www.preview.premierart.be"
+    },
+    {
+      "title": "Privacy Policy",
+      "link": "https://www.preview.premierart.be/privacy-policy"
+    },
+    {
+      "title": "Cookie Policy",
+      "link": "https://www.preview.premierart.be/cookie-policy"
+    }
+  ],
   "address": {
     "url": "https://goo.gl/maps/xS8che1DjJgBenVd7",
     "address": "Av. Roi Albert I 64, 1780 Wemmel, Belgique"
   },
-  "mail": {
-    "mail": "info@premierart.be",
-    "caption": "Contact",
-    "sending": "En cours d'envoi",
-    "callback": {
-      "url": "https://medistia.us21.list-manage.com/subscribe/post?u=d0fbe5c26f7401678e2eb5506&amp;id=58c20e0c30&amp;f_id=00f3f8e1f0",
-      "successMessage": "Nous avons bien reçu votre message. Merci !",
-      "successSubMessage": "Votre message sera traité avec la plus grande attention dès que possible.",
-      "errorMessage": "Veuillez réessayer ultérieurement. Si le problème persiste, veuillez nous contacter par téléphone.",
-      "errorSubMessage": "Oops. Quelque chose s'est mal passé."
-    },
-    "newsletter": {
-      "title": "Apprenez-en plus sur notre lancement",
-      "description": "Inscrivez-vous à notre newsletter et nous vous enverrons une notification concernant le lancement de notre tout nouveau site web ainsi que l'ouverture de votre centre Premier Art.",
-      "send": "Envoyer"
-    }
-  },
-  "tel": {
-    "tel": "+32493876106",
-    "caption": "Téléphone"
-  },
+  "tel": "+32 456 12 34 56",
+  "email": "info@premierart.be",
+  "tva": "BE 0123.456.789",
+  "locales": ["fr", "nl", "en"],
   "author": {
     "name": "Crackn",
     "url": "https://www.crackn.co"

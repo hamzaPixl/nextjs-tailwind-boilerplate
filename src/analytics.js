@@ -1,4 +1,4 @@
-import injected from '../injected.json'
+import injected from './injected.json'
 
 export const GA_TRACKING_ID = injected.gtag
 
