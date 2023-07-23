@@ -4,7 +4,14 @@ import React from 'react'
 export default function MissionCard({ title, index, description, image, inverted }) {
   const illustration = (
     <div className='w-1/2'>
-      <Image width={450} height={350} className='py-2' alt='Mission illustration' src={image} />
+      <Image
+        loading='lazy'
+        width={450}
+        height={350}
+        className='py-2'
+        alt='Mission illustration'
+        src={image}
+      />
     </div>
   )
   return (

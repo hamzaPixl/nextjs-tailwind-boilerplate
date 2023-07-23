@@ -20,7 +20,7 @@ export default function ProjectCard({ project }) {
           <div className='h-96 w-full flex justify-start items-end bg-background/50 hover:bg-background/0 rounded-md transition-all'>
             <div className='hidden group-hover:block px-5 py-10'>
               <div className='text-3xl font-bold pb-5'>{t(title)}</div>
-              <div className='text-md'>{t(shortDescription)}</div>
+              <div className='text-md w-1/3'>{t(shortDescription)}</div>
             </div>
           </div>
         </div>

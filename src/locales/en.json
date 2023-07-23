@@ -5,9 +5,11 @@
   "newsletter.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sedipsum ac, tincidunt mollis erat.",
   "newsletter.button": "Stay in the loop",
 
+  "projects.before": "Before",
+  "projects.after": "After",
   "projects.other": "Other projects",
   "projects.plan": "The plans",
-  "projects.plan.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sedipsum ac, tincidunt mollis erat.",
+  "projects.plan.description": "Introduction lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat. Maecenas vulputate est eu finibus vestibulum.",
   "projects.all": "Show all projects",
 
   "projects.detail.location": "Location",

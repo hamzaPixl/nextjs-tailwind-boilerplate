@@ -11,6 +11,7 @@
 ## actions
 
 [] no more free text
+[] image size
 [] mobile responsive
 [] newsletter action
 [] form submit action
@@ -42,4 +43,8 @@
 
 [x] & various fixes on previous component / pages
 [x] projects
+
+# 23/07
+
 [x] project detail
+[x] lazy load

@@ -62,12 +62,14 @@ export default function About() {
       </div>
       <div className='flex flex-row justify-around p-10 w-full my-10'>
         <Image
+          loading='lazy'
           width={450}
           height={350}
           alt='About 1 illustration'
           src={'/images/about/about1.png'}
         />
         <Image
+          loading='lazy'
           width={450}
           height={350}
           alt='About 2 illustration'

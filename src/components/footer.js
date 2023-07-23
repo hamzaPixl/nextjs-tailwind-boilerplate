@@ -9,6 +9,7 @@ export default function Footer() {
         {injected.socials.map((item, index) => (
           <a key={index} className='text-background' href={item.link}>
             <Image
+              loading='lazy'
               width={20}
               height={20}
               src={`/icons/${item.title}.svg`}
