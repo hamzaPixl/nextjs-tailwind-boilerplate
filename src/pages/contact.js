@@ -1,14 +1,11 @@
 import React, { useState } from 'react'
 import Layout from '../components/layout'
 import Newsletter from '../components/newsletter'
-import { useTranslate } from '../hooks/useTranslate'
 import ContactCard from '../components/cards/contact'
 import injected from '../injected.json'
 import ContactForm from '../components/forms/contact'
 
 export default function Contact() {
-  const { t } = useTranslate()
-
   const [formData, setFormData] = useState({
     name: '',
     email: '',

@@ -1,21 +1,20 @@
 # todos
 
+## nice to do
+
+[] background url to fix
+
 ## component
 
 [] burger nav
 
-## pages
-
-[] projects
-[] project detail
-
 ## actions
 
 [] no more free text
+[] mobile responsive
 [] newsletter action
 [] form submit action
 [] burger nav
-[] mobile responsive
 
 ## log time
 
@@ -38,3 +37,9 @@
 [x] home
 [x] contact
 [x] about
+
+# 22/07 - 5 hours
+
+[x] & various fixes on previous component / pages
+[x] projects
+[x] project detail

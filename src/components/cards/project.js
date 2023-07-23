@@ -1,20 +1,30 @@
-import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
+import { useTranslate } from '../../hooks/useTranslate'
 
-export default function ProjectCard({ title, description, image }) {
+export default function ProjectCard({ project }) {
+  const { t } = useTranslate()
+  const {
+    title,
+    shortDescription = 'home.project.shortDescription',
+    defaultImage = '/images/project/project1.png',
+    link = '/projects',
+  } = project
   return (
-    <div className='group w-1/6 h-40 my-5 text-globalText flex flex-col justify-between items-start font-normal hover:cursor-pointer px-2 relative'>
-      <Image
-        className='z-10 hover:opacity-100 absolute opacity-75'
-        alt='Mission illustration'
-        src={image}
-        width={450}
-        height={350}
-      />
-      <div className='z-20 absolute top-36 left-5 hidden group-hover:block transition-all'>
-        <div className='text-md font-bold'>{title}</div>
-        <div className='text-xs top-44'>{description}</div>
-      </div>
+    <div className='group h-auto max-w-full text-globalText font-normal hover:cursor-pointer'>
+      <Link href={link}>
+        <div
+          style={{ '--image-url': `url(${defaultImage})` }}
+          className='flex justify-start items-end bg-no-repeat bg-cover bg-center rounded-md bg-[image:var(--image-url)]'
+        >
+          <div className='h-96 w-full flex justify-start items-end bg-background/50 hover:bg-background/0 rounded-md transition-all'>
+            <div className='hidden group-hover:block px-5 py-10'>
+              <div className='text-3xl font-bold pb-5'>{t(title)}</div>
+              <div className='text-md'>{t(shortDescription)}</div>
+            </div>
+          </div>
+        </div>
+      </Link>
     </div>
   )
 }

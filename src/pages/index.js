@@ -6,6 +6,7 @@ import AboutCard from '../components/cards/about'
 import QuoteCard from '../components/cards/quote'
 import ProjectCard from '../components/cards/project'
 import { InvertedButton } from '../components/button'
+import { allProjects } from '../api/projects'
 
 export default function Home() {
   const { t } = useTranslate()
@@ -28,25 +29,13 @@ export default function Home() {
           mainLinkText={t('home.hero.primaryAction')}
         />
       </div>
-      <div className='flex flex-row justify-around p-10 w-full my-10'>
-        <ProjectCard
-          title={t('home.project1.title')}
-          description={t('home.project1.description')}
-          image='/images/project/project1.png'
-          link='/projects/project1'
-        />
-        <ProjectCard
-          title={t('home.project2.title')}
-          description={t('home.project2.description')}
-          image='/images/project/project2.png'
-          link='/projects/project2'
-        />
-        <ProjectCard
-          title={t('home.project3.title')}
-          description={t('home.project3.description')}
-          image='/images/project/project3.png'
-          link='/projects/project3'
-        />
+
+      <div className='grid grid-cols-2 md:grid-cols-3 gap-4 my-10 w-full'>
+        {allProjects.slice(0, 3).map((item, index) => (
+          <div key={index}>
+            <ProjectCard project={item} />
+          </div>
+        ))}
       </div>
       <InvertedButton link='/projects' message={t('home.projects')} />
       <div className='flex justify-center p-10 w-full my-10'>
