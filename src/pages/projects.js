@@ -26,7 +26,6 @@ const getBatchedProjects = (filterdProjects, grid = 3) => {
   for (let i = 0; i < batches; i++) {
     bP.push(filterdProjects.slice(i * batch, (i + 1) * batch))
   }
-  console.log(bP)
   return bP
 }
 

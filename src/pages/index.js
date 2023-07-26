@@ -58,7 +58,7 @@ export default function Home() {
           title={t('home.about.title')}
           description={t('home.about.description')}
           className='absolute -bottom-20 right-20'
-          mainLink={'/contact'}
+          mainLink={'/about'}
           mainLinkText={t('home.about.primaryAction')}
         />
       </div>

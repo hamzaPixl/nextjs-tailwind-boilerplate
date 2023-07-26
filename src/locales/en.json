@@ -1,6 +1,17 @@
 {
   "title": "Welcome to Premier Art",
 
+  "contact.form.success": "Your message has been sent successfully.",
+  "contact.form.send": "Send message",
+  "contact.form.title": "Send us a message",
+  "contact.form.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat.",
+  "contact.form.name": "Name.",
+  "contact.form.name.placeholder": "Your name",
+  "contact.form.email": "Email",
+  "contact.form.email.placeholder": "Your email",
+  "contact.form.message": "Message",
+  "contact.form.message.placeholder": "Your message",
+
   "newsletter.title": "Subscribe to our newsletter",
   "newsletter.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sedipsum ac, tincidunt mollis erat.",
   "newsletter.button": "Stay in the loop",

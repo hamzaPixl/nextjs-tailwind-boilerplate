@@ -10,7 +10,6 @@
 
 ## actions
 
-[] no more free text
 [] image size
 [] mobile responsive
 [] newsletter action
@@ -44,7 +43,8 @@
 [x] & various fixes on previous component / pages
 [x] projects
 
-# 23/07
+# 23/07 - 3 hours
 
 [x] project detail
 [x] lazy load
+[x] no more free text
