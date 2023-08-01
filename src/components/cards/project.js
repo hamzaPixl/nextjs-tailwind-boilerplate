@@ -11,16 +11,16 @@ export default function ProjectCard({ project }) {
     link = '/projects',
   } = project
   return (
-    <div className='group h-auto max-w-full text-globalText font-normal hover:cursor-pointer'>
+    <div className='group h-44 md:h-[32rem] max-w-full text-globalText font-normal hover:cursor-pointer'>
       <Link href={link}>
         <div
           style={{ '--image-url': `url(${defaultImage})` }}
           className='flex justify-start items-end bg-no-repeat bg-cover bg-center rounded-md bg-[image:var(--image-url)]'
         >
-          <div className='h-96 w-full flex justify-start items-end bg-background/50 hover:bg-background/0 rounded-md transition-all'>
+          <div className='h-44 md:h-[32rem] w-full flex justify-start items-end bg-background/50 hover:bg-background/0 rounded-md transition-all'>
             <div className='hidden group-hover:block px-5 py-10'>
-              <div className='text-3xl font-bold pb-5'>{t(title)}</div>
-              <div className='text-md w-1/3'>{t(shortDescription)}</div>
+              <div className='text-lg md:text-3xl font-bold pb-5'>{t(title)}</div>
+              <div className='text-md'>{t(shortDescription)}</div>
             </div>
           </div>
         </div>

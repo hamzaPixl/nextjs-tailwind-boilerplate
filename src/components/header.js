@@ -15,7 +15,19 @@ export default function Header() {
         <Link href={'/'} className='w-36 h-16 md:w-64 md:h-36 relative'>
           <Image loading='lazy' fill src='/logo.svg' alt={`Logo`} />
         </Link>
-        <div className='uppercase text-background/50'>
+        <div className='md:hidden uppercase text-background'>
+          <select
+            onChange={(e) => {
+              switchLocale(e.target.value)
+            }}
+            className='[&:not(size)]:bg-none [&:not(size)]:border-none [&:not(size)]:p-0'
+          >
+            {injected.locales.map((item, index) => (
+              <option key={index}>{item}</option>
+            ))}
+          </select>
+        </div>
+        <div className='hidden md:block uppercase text-background/50'>
           {injected.locales.map((item, index) => (
             <a
               key={index}

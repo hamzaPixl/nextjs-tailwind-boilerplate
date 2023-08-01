@@ -12,7 +12,7 @@ export default function MoreAbout({
 }) {
   return (
     <div
-      className='bg-background md:p-10 w-full md:w-1/2 bg-[image:var(--image-url)] bg-cover bg-center bg-no-repeat relative md:h-[38em] h-[60em]'
+      className='bg-background md:p-10 w-full md:w-4/5 bg-[image:var(--image-url)] bg-cover bg-center bg-no-repeat relative md:h-[38em] h-[60em]'
       style={{ '--image-url': `url(${backgroundImage})` }}
     >
       <div className='absolute md:-right-80 md:-bottom-40 bottom-0 mb-10'>
