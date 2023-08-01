@@ -39,7 +39,7 @@ export const allProjects = [
       '/images/project/project5.png',
       '/images/project/project3.png',
     ],
-    filter: ['all', 'construction'],
+    filter: ['all', 'construction', 'architecture'],
   },
   {
     name: 'project2',

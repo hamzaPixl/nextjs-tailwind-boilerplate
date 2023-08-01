@@ -7,55 +7,31 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { allProjects, filters } from '../api/projects'
 
-const getBatchedProjects = (filterdProjects, grid = 3) => {
-  const bP = []
-  let batches = 0
-  let batch = grid
-
-  if (filterdProjects.length <= grid) {
-    batches = filterdProjects.length
-    batch = 1
-  } else {
-    if (!(filterdProjects.length % grid)) {
-      // adaptable to grid
-      batches = filterdProjects.length / grid
-    } else {
-      batches = Math.floor(filterdProjects.length / grid) + 1
-    }
-  }
-  for (let i = 0; i < batches; i++) {
-    bP.push(filterdProjects.slice(i * batch, (i + 1) * batch))
-  }
-  return bP
-}
-
 export default function Projects() {
   const router = useRouter()
   const { t } = useTranslate()
-  const [projects, setProjects] = useState(getBatchedProjects(allProjects))
+  const [projects, setProjects] = useState(allProjects)
   const [filter, setFilter] = useState(filters[0])
 
   useEffect(() => {
     if (router.query.filter?.length > 0) {
       setFilter(router.query.filter)
-      setProjects(
-        getBatchedProjects(allProjects.filter((item) => item.filter.includes(router.query.filter))),
-      )
+      setProjects(allProjects.filter((item) => item.filter.includes(router.query.filter)))
     }
   }, [router.query])
 
   return (
     <Layout>
-      <div className='self-baseline my-10 w-2/3 text-background'>
-        <div className='text-3xl font-bold mb-10'>{t('projects.title')}</div>
-        <div className='text-md font-normal mb-10'>{t('projects.description')}</div>
-        <div className='mb-20 flex flex-row '>
+      <div className='self-baseline my-10 w-full text-background'>
+        <div className='text-lg md:text-3xl font-bold mb-10'>{t('projects.title')}</div>
+        <div className='text-base font-normal mb-10'>{t('projects.description')}</div>
+        <div className='mb-5 md:mb-20 flex flex-col md:flex-row  text-background/50'>
           {filters.map((item, index) => (
             <Link key={index} href={`/projects?filter=${item}`}>
               <div
-                className={`text-md pr-5 ${
-                  item === filter && 'font-bold underline underline-offset-8'
-                } hover:font-bold transition-all hover:cursor-pointer hover:underline-offset-8 hover:underline`}
+                className={`transition-all cursor-pointer text-base pr-5 mb-5 md:m-0 ${
+                  item === filter && 'font-bold underline underline-offset-8 text-background'
+                } hover:font-bold hover:underline-offset-8 hover:underline hover:text-background`}
               >
                 {t(`projects.filter.${item}`)}
               </div>
@@ -63,18 +39,31 @@ export default function Projects() {
           ))}
         </div>
       </div>
-      <div className='grid grid-flow-dense grid-cols-2 md:grid-cols-4 gap-4 my-10 w-full'>
-        {projects.map((batch, index) => (
-          <div key={index} className='grid gap-4'>
-            {batch.map((item, index) => (
-              <div key={index}>
-                <ProjectCard project={item} />
-              </div>
-            ))}
+      <div className='grid grid-flow-dense grid-cols-2 md:grid-cols-3 gap-4 my-10 w-full'>
+        {projects.slice(0, 4).map((item, index) => (
+          <div className='grid gap-4' key={index}>
+            <ProjectCard project={item} />
+          </div>
+        ))}
+        {projects.slice(4, 8).map((item, index) => (
+          <div className='grid gap-4' key={index}>
+            <ProjectCard project={item} />
+          </div>
+        ))}
+        {projects.slice(8, 12).map((item, index) => (
+          <div className='grid gap-4' key={index}>
+            <ProjectCard project={item} />
+          </div>
+        ))}
+        {projects.slice(12, 16).map((item, index) => (
+          <div className='grid gap-4' key={index}>
+            <ProjectCard project={item} />
           </div>
         ))}
       </div>
-      <Newsletter />
+      <div className='w-full md:mt-40'>
+        <Newsletter />
+      </div>
     </Layout>
   )
 }
