@@ -5,15 +5,15 @@ import { useTranslate } from '../../hooks/useTranslate'
 export default function ContactForm({ formSuccess, handleInput, formData, submitForm }) {
   const { t } = useTranslate()
   return (
-    <div className='p-10 text-background flex flex-col justify-between items-left font-normal'>
-      <h1 className='text-3xl font-bold'>{t('contact.form.title')}</h1>
-      <div className='py-10 w-2/3 text-md'>{t('contact.form.description')}</div>
+    <div className='p-10 text-background flex flex-col justify-between items-left text-md font-normal'>
+      <h1 className='text-lg md:text-3xl my-5 font-bold'>{t('contact.form.title')}</h1>
+      <div className='text:md md:text-lg mb-10'>{t('contact.form.description')}</div>
       {formSuccess ? (
         <div>{t('contact.form.success')}</div>
       ) : (
         <form method='POST' onSubmit={submitForm}>
-          <div className='flex flex-row justify-between w-full pb-10'>
-            <div className='w-1/2 pr-10'>
+          <div className='flex flex-col md:flex-row md:flex-wrap justify-between w-full pb-10'>
+            <div className='my-10 md:my-0 md:w-1/2 md:pr-10'>
               <div className='flex flex-col justify-start pb-5'>
                 <label className='font-bold'>{t('contact.form.name')}</label>
                 <input
@@ -35,7 +35,7 @@ export default function ContactForm({ formSuccess, handleInput, formData, submit
                 />
               </div>
             </div>
-            <div className='w-1/2 pl-10 flex flex-col justify-start'>
+            <div className='flex flex-col justify-start md:w-1/2 md:pl-10'>
               <label className='font-bold'>{t('contact.form.message')}</label>
               <textarea
                 name='message'

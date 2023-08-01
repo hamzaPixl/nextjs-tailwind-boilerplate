@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Layout from '../components/layout'
 import Newsletter from '../components/newsletter'
-import ContactCard from '../components/cards/contact'
 import injected from '../injected.json'
 import ContactForm from '../components/forms/contact'
+import ContactHero from '../components/contactHero'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -57,27 +57,18 @@ export default function Contact() {
 
   return (
     <Layout>
-      <div
-        className='bg-background flex flex-col justify-between items-left p-10 w-full relative mb-40'
-        style={{
-          backgroundImage: `url('/images/hero/hero-about.png')`,
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          height: '34em',
-        }}
-      >
-        <div className='absolute -bottom-20 right-20'>
-          <ContactCard
-            address={injected.address.address}
-            addressLink={injected.address.url}
-            contactLink={'/contact'}
-            phone={injected.tel}
-            email={injected.email}
-            tva={injected.tva}
-          />
-        </div>
+      <div className='w-full mb-20'>
+        <ContactHero
+          backgroundImage={`/images/hero/hero-about.png`}
+          address={injected.address.address}
+          addressLink={injected.address.url}
+          contactLink={'/contact'}
+          phone={injected.tel}
+          email={injected.email}
+          tva={injected.tva}
+        />
       </div>
-      <div className='flex flex-col justify-between p-20 w-full my-10'>
+      <div className='w-full my-5'>
         <ContactForm
           handleInput={handleInput}
           submitForm={submitForm}
@@ -86,7 +77,9 @@ export default function Contact() {
           formSuccessMessage={formSuccessMessage}
         />
       </div>
-      <Newsletter />
+      <div className='w-full md:mt-40'>
+        <Newsletter />
+      </div>
     </Layout>
   )
 }
