@@ -15,7 +15,7 @@ export default function Header() {
         <Link href={'/'} className='w-36 h-16 md:w-64 md:h-36 relative'>
           <Image loading='lazy' fill src='/logo.svg' alt={`Logo`} />
         </Link>
-        <div className='md:hidden uppercase text-background'>
+        <div className='md:hidden'>
           <select
             onChange={(e) => {
               switchLocale(e.target.value)
@@ -23,7 +23,9 @@ export default function Header() {
             className='[&:not(size)]:bg-none [&:not(size)]:border-none [&:not(size)]:p-0'
           >
             {injected.locales.map((item, index) => (
-              <option key={index}>{item}</option>
+              <option key={index} className='uppercase text-background' value={item}>
+                {item.toUpperCase()}
+              </option>
             ))}
           </select>
         </div>
