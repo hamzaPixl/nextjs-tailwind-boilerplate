@@ -38,10 +38,8 @@ export default function Home() {
 
       <div className='w-full mt-10 md:mt-20 md:mb-[34rem]'>
         <QuoteCard
-          source={'- John Doe'}
-          quote={
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod ipsum et dui rhoncus auctor.'
-          }
+          quote={t('about.quote1.text')}
+          source={t('about.quote1.source')}
           image={'/images/quote/jurica-koletic.png'}
         />
       </div>

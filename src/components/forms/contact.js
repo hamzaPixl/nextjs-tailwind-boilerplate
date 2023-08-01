@@ -21,7 +21,7 @@ export default function ContactForm({ formSuccess, handleInput, formData, submit
                   name='name'
                   onChange={handleInput}
                   value={formData.name}
-                  className='border focus:border-background focus:ring-background border-background/50 rounded-sm'
+                  className='border-2 focus:border-background focus:ring-background border-background/50 rounded-sm'
                 />
               </div>
               <div className='flex flex-col justify-start'>
@@ -31,7 +31,7 @@ export default function ContactForm({ formSuccess, handleInput, formData, submit
                   name='email'
                   onChange={handleInput}
                   value={formData.email}
-                  className='border focus:border-background focus:ring-background border-background/50 rounded-sm'
+                  className='border-2 focus:border-background focus:ring-background border-background/50 rounded-sm'
                 />
               </div>
             </div>
@@ -41,7 +41,7 @@ export default function ContactForm({ formSuccess, handleInput, formData, submit
                 name='message'
                 onChange={handleInput}
                 value={formData.message}
-                className='border focus:border-background focus:ring-background border-background rounded-sm h-full'
+                className='border-2 focus:border-background focus:ring-background border-background rounded-sm h-full'
               ></textarea>
             </div>
           </div>

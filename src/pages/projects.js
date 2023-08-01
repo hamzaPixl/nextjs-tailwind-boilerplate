@@ -22,7 +22,7 @@ export default function Projects() {
 
   return (
     <Layout>
-      <div className='self-baseline my-10 w-full text-background'>
+      <div className='self-baseline mb-10 w-full text-background'>
         <div className='text-lg md:text-3xl font-bold mb-10'>{t('projects.title')}</div>
         <div className='text-base font-normal mb-10'>{t('projects.description')}</div>
         <div className='mb-5 md:mb-20 flex flex-col md:flex-row  text-background/50'>
@@ -39,6 +39,7 @@ export default function Projects() {
           ))}
         </div>
       </div>
+
       <div className='grid grid-flow-dense grid-cols-2 md:grid-cols-3 gap-4 my-10 w-full'>
         {projects.slice(0, 4).map((item, index) => (
           <div className='grid gap-4' key={index}>
