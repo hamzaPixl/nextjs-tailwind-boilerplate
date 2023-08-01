@@ -1,50 +1,96 @@
-# todos
+# Premier Art
 
-## nice to do
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/clevertech-be/premier-art/blob/master/LICENSE)
+[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)](https://github.com/clevertech-be/premier-art/commits/master)
 
-[] background url to fix
+<br />
+<p align="center">
+  <h3 align="center">Premier Art</h3>
 
-## component
+  <p align="center">
+    <br />
+    <a href="https://github.com/clevertech-be/premier-art/blob/master/README.md"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://premier-art.be/">View Demo</a>
+    ·
+    <a href="https://github.com/clevertech-be/premier-art/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/clevertech-be/premier-art/issues">Request Feature</a>
+  </p>
+</p>
 
-[] burger nav
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#built with">Built with</a></li>
+    <li><a href="#contributting">Contributing</a></li>
+    <li><a href="#liscence">Liscence</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#link">Link</a></li>
+  </ol>
+</details>
 
-## actions
+<br>
 
-[] image size
-[] mobile responsive
-[] newsletter action
-[] form submit action
-[] burger nav
+## Author
 
-## log time
+Hamza Mounir & Rachid Asli
 
-# 20/07 - 5 hours
+## Contributing
 
-[X] newsletter
-[X] button
-[x] header
-[x] footer
-[x] contact card
-[x] team card
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+Hamza Mounir - hamza@clevertech.be
+Rachid Asli - rachid@clevertech.be
+
+## Link
+
+## TimeSheet
+
+### 20/07 - 5 hours
+
+- [x] newsletter
+- [x] button
+- [x] header
+- [x] footer
+- [x] contact card
+- [x] team card
 
 # 21/07 - 4 hours
 
-[x] contact form
-[x] mission card
-[x] quote card
-[x] project card
-[x] mission
-[x] home
-[x] contact
-[x] about
+- [x] contact form
+- [x] mission card
+- [x] quote card
+- [x] project card
+- [x] mission
+- [x] home
+- [x] contact
+- [x] about
 
 # 22/07 - 5 hours
 
-[x] & various fixes on previous component / pages
-[x] projects
+- [x] & various fixes on previous component / pages
+- [x] projects
 
 # 23/07 - 3 hours
 
-[x] project detail
-[x] lazy load
-[x] no more free text
+- [x] project detail
+- [x] lazy load
+- [x] no more free text
+
+# 23/07 - 3 hours
+
+- [x] multiple fix for responsive

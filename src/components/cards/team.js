@@ -1,7 +1,8 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
-export default function TeamCard({ image, description, firstName, lastName, link }) {
+export default function TeamCard({ image, description, firstName, lastName, link = '/about' }) {
   return (
     <div className='w-96 p-10 text-background flex flex-col justify-between items-left font-normal'>
       <Image
@@ -16,9 +17,9 @@ export default function TeamCard({ image, description, firstName, lastName, link
         {firstName} {lastName}
       </div>
       <div className='text-md py-2'>{description}</div>
-      <a href={link} className='text-md py-2 font-bold'>
+      <Link href={link} className='text-md py-2 font-bold'>
         Follow on Linkedin
-      </a>
+      </Link>
     </div>
   )
 }
