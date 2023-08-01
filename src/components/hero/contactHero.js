@@ -1,5 +1,5 @@
 import React from 'react'
-import ContactCard from './cards/contact'
+import ContactCard from '../cards/contact'
 
 export default function ContactHero({
   address,

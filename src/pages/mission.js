@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import Newsletter from '../components/newsletter'
 import { useTranslate } from '../hooks/useTranslate'
 import MissionCard from '../components/cards/mission'
-import AboutHero from '../components/aboutHero'
+import AboutHero from '../components/hero/aboutHero'
 
 const missions = Array.from({ length: 7 })
 

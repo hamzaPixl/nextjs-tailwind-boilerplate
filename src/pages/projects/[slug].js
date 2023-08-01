@@ -3,10 +3,10 @@ import Layout from '../../components/layout'
 import { useTranslate } from '../../hooks/useTranslate'
 import { useRouter } from 'next/router'
 import { allProjects } from '../../api/projects'
-import ProjectDetailCard from '../../components/cards/projectDetail'
 import ProjectCard from '../../components/cards/project'
 import Link from 'next/link'
 import Image from 'next/image'
+import ProjectHero from '../../components/hero/projectHero'
 
 export default function ProjectDetail() {
   const router = useRouter()
@@ -24,19 +24,9 @@ export default function ProjectDetail() {
 
   return (
     <Layout>
-      <div
-        className='bg-background flex flex-col justify-between items-left p-10 w-full relative mb-40'
-        style={{
-          backgroundImage: `url('/images/hero/hero-about.png')`,
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          height: '34em',
-        }}
-      >
-        {project && <ProjectDetailCard project={project} />}
-      </div>
+      <div className='w-full mb-40'>{project && <ProjectHero project={project} />}</div>
 
-      <div className='grid grid-flow-dense grid-cols-2 md:grid-cols-3 gap-4 my-10 w-full'>
+      <div className='grid grid-flow-dense grid-cols-1 md:grid-cols-3 gap-4 my-10 w-full'>
         {project?.images?.map((item, index) => (
           <div
             key={index}
@@ -49,8 +39,8 @@ export default function ProjectDetail() {
       {/**
        * Before & After projects
        */}
-      <div className='flex flex-row text-left justify-between w-full font-bold text-4xl text-background my-10'>
-        <div className='w-1/2 mr-20'>
+      <div className='flex flex-col md:flex-row text-center md:text-left justify-between w-full font-bold text-4xl text-background mt-20'>
+        <div className='mb-20'>
           <div className='mb-10'>{t('projects.before')}</div>
           <div className='grid grid-flow-dense gap-4 w-full'>
             {project?.beforeImages?.[featuredBefore] && (
@@ -68,11 +58,11 @@ export default function ProjectDetail() {
             {project?.beforeImages?.length > 1 && (
               <div className='grid grid-cols-5 gap-4'>
                 {project?.beforeImages.map((item, index) => (
-                  <div key={index}>
+                  <div key={index} className='w-full relative h-[3rem] md:h-[8rem]'>
                     <Image
                       loading='lazy'
-                      width={650}
-                      height={350}
+                      sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                      fill
                       className='cursor-pointer rounded-lg filter grayscale hover:grayscale-0 transition-all'
                       onClick={() => {
                         setFeaturedBefore(index)
@@ -87,7 +77,7 @@ export default function ProjectDetail() {
             )}
           </div>
         </div>
-        <div className='w-1/2'>
+        <div>
           <div className='mb-10'>{t('projects.after')}</div>
           <div className='grid grid-flow-dense gap-4 w-full'>
             {project?.afterImages?.[featuredAfter] && (
@@ -105,11 +95,11 @@ export default function ProjectDetail() {
             {project?.afterImages?.length > 1 && (
               <div className='grid grid-cols-5 gap-4'>
                 {project?.afterImages.map((item, index) => (
-                  <div key={index}>
+                  <div key={index} className='w-full relative h-[3rem] md:h-[8rem]'>
                     <Image
                       loading='lazy'
-                      width={650}
-                      height={350}
+                      sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                      fill
                       className='cursor-pointer rounded-lg filter grayscale hover:grayscale-0 transition-all'
                       onClick={() => {
                         setFeaturedBefore(index)
@@ -130,8 +120,8 @@ export default function ProjectDetail() {
        * Plans
        */}
       <div className='text-background w-full items-center text-center my-40 flex flex-col'>
-        <div className='text-3xl font-bold pb-5'>{t('projects.plan')}</div>
-        <div className='text-base font-normal leading-normal w-1/3'>
+        <div className='text-lg md:text-3xl font-bold pb-5'>{t('projects.plan')}</div>
+        <div className='text-md md:text-lg font-normal leading-normal md:w-1/3'>
           {t('projects.plan.description')}
         </div>
         <div className='grid grid-flow-dense gap-4 w-full my-10'>
@@ -170,17 +160,17 @@ export default function ProjectDetail() {
       {/**
        * Other projects
        */}
-      <div className='w-full flex bg-background flex-col text-base text-globalText p-10 justify-between'>
-        <div className='flex flex-row text-globalText justify-between w-full font-bold'>
-          <div className='text-3xl pb-5'>{t('projects.other')}</div>
+      <div className='w-full md:mt-40 flex flex-wrap bg-background flex-col text-globalText p-10 justify-between'>
+        <div className='flex flex-row text-globalText justify-between items-center w-full font-bold'>
+          <div className='text-lg md:text-3xl pb-5'>{t('projects.other')}</div>
           <Link
-            className='pb-5 hover:underline hover:underline-offset-8 transition-all'
+            className='text-xs md:text-lg pb-5 hover:underline hover:underline-offset-8 transition-all'
             href={'/projects'}
           >
             {t('projects.all')}
           </Link>
         </div>
-        <div className='grid grid-cols-2 md:grid-cols-3 gap-4 my-10 w-full'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4 my-10 w-full'>
           {allProjects.slice(0, 3).map((item, index) => (
             <div key={index}>
               <ProjectCard project={item} />

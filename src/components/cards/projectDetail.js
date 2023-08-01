@@ -6,7 +6,7 @@ export default function ProjectDetailCard({ project }) {
   const { t } = useTranslate()
   return (
     <div
-      className={`bg-globalText text-background flex flex-row justify-between items-left p-10 absolute -bottom-20 w-full`}
+      className={`bg-globalText text-background flex flex-col md:flex-row justify-between items-left p-10 w-full`}
     >
       <div className='flex flex-col py-5 w-2/5'>
         <div className='text-3xl font-bold pb-5'>{t(title)}</div>

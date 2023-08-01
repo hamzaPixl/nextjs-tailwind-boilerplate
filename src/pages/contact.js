@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import Newsletter from '../components/newsletter'
 import injected from '../injected.json'
 import ContactForm from '../components/forms/contact'
-import ContactHero from '../components/contactHero'
+import ContactHero from '../components/hero/contactHero'
 
 export default function Contact() {
   const [formData, setFormData] = useState({

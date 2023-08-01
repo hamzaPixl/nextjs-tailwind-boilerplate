@@ -5,7 +5,7 @@ import { useTranslate } from '../hooks/useTranslate'
 import ProjectCard from '../components/cards/project'
 import { InvertedButton } from '../components/button'
 import { allProjects } from '../api/projects'
-import AboutHero from '../components/aboutHero'
+import AboutHero from '../components/hero/aboutHero'
 import MoreAbout from '../components/moreAbout'
 import QuoteCard from '../components/cards/quote'
 

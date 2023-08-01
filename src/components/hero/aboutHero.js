@@ -1,5 +1,5 @@
 import React from 'react'
-import AboutCard from './cards/about'
+import AboutCard from '../cards/about'
 
 export default function AboutHero({
   title,

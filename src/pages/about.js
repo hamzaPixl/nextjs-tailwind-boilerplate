@@ -4,7 +4,7 @@ import Newsletter from '../components/newsletter'
 import { useTranslate } from '../hooks/useTranslate'
 import TeamCard from '../components/cards/team'
 import Image from 'next/image'
-import AboutHero from '../components/aboutHero'
+import AboutHero from '../components/hero/aboutHero'
 import QuoteCard from '../components/cards/quote'
 
 export default function About() {
