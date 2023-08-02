@@ -24,7 +24,7 @@ export default function ProjectDetail() {
 
   return (
     <Layout>
-      <div className='w-full mb-40'>{project && <ProjectHero project={project} />}</div>
+      <div className='w-full md:mb-40'>{project && <ProjectHero project={project} />}</div>
 
       <div className='grid grid-flow-dense grid-cols-1 md:grid-cols-3 gap-4 my-10 w-full'>
         {project?.images?.map((item, index) => (
