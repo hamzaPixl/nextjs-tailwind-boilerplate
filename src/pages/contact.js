@@ -4,54 +4,31 @@ import Newsletter from '../components/newsletter'
 import injected from '../injected.json'
 import ContactForm from '../components/forms/contact'
 import ContactHero from '../components/hero/contactHero'
+import { useTranslate } from '../hooks/useTranslate'
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  })
+  const { t } = useTranslate()
+  const [formSuccess, setFormSuccess] = useState()
+  const [formError, setFormError] = useState()
 
-  const [formSuccess, setFormSuccess] = useState(false)
-  const [formSuccessMessage, setFormSuccessMessage] = useState('')
+  const handleSubmit = (event) => {
+    event.preventDefault()
 
-  const handleInput = (e) => {
-    const fieldName = e.target.name
-    const fieldValue = e.target.value
-
-    setFormData((prevState) => ({
-      ...prevState,
-      [fieldName]: fieldValue,
-    }))
-  }
-
-  const submitForm = (e) => {
-    e.preventDefault()
-
-    const formURL = e.target.action
-    const data = new FormData()
-
-    Object.entries(formData).forEach(([key, value]) => {
-      data.append(key, value)
-    })
-
-    fetch(formURL, {
+    const myForm = event.target
+    const formData = new FormData(myForm)
+    console.log(new URLSearchParams(formData).toString())
+    fetch('/', {
       method: 'POST',
-      body: data,
-      headers: {
-        accept: 'application/json',
-      },
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
     })
-      .then((response) => response.json())
-      .then((data) => {
-        setFormData({
-          name: '',
-          email: '',
-          message: '',
-        })
-
-        setFormSuccess(true)
-        setFormSuccessMessage(data.submission_text)
+      .then(() => {
+        setFormSuccess({ message: t('contact.form.success') })
+        console.log(t('contact.form.success'))
+      })
+      .catch(() => {
+        setFormError({ message: t('contact.form.error') })
+        console.log(t('contact.form.error'))
       })
   }
 
@@ -69,13 +46,7 @@ export default function Contact() {
         />
       </div>
       <div className='w-full my-5'>
-        <ContactForm
-          handleInput={handleInput}
-          submitForm={submitForm}
-          formData={formData}
-          formSuccess={formSuccess}
-          formSuccessMessage={formSuccessMessage}
-        />
+        <ContactForm handleSubmit={handleSubmit} formSuccess={formSuccess} formError={formError} />
       </div>
       <div className='w-full md:mt-40'>
         <Newsletter />
