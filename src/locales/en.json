@@ -121,5 +121,7 @@
 
   "policy.cookie.title": "This website uses cookies to improve user experience.",
   "policy.cookie.text": "By using our website you consent to all cookies in accordance with our ",
-  "policy.cookie.page": "Cookie policy"
+  "policy.cookie.page": "Cookie policy",
+  "policy.privacy.page": "Privacy policy",
+  "policy.terms.page": "Terms and Conditions"
 }

@@ -88,15 +88,15 @@
     },
     {
       "title": "Privacy Policy",
-      "link": "https://www.preview.premierart.be/privacy-policy"
+      "link": "/policy/privacy"
     },
     {
       "title": "Terms Policy",
-      "link": "https://www.preview.premierart.be/terms-policy"
+      "link": "/policy/terms"
     },
     {
       "title": "Cookie Policy",
-      "link": "https://www.preview.premierart.be/cookie-policy"
+      "link": "/policy/cookie"
     }
   ],
   "address": {
