@@ -117,5 +117,9 @@
   "mission.6.title": "Excuting the project",
   "mission.6.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat. Maecenas vulputate est eu finibus vestibulum. Nunc ex quam, vehicula eget varius placerat, dignissim vitae ligula.",
   "mission.7.title": "Worksite",
-  "mission.7.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat. Maecenas vulputate est eu finibus vestibulum. Nunc ex quam, vehicula eget varius placerat, dignissim vitae ligula."
+  "mission.7.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat. Maecenas vulputate est eu finibus vestibulum. Nunc ex quam, vehicula eget varius placerat, dignissim vitae ligula.",
+
+  "policy.cookie.title": "This website uses cookies to improve user experience.",
+  "policy.cookie.text": "By using our website you consent to all cookies in accordance with our ",
+  "policy.cookie.page": "Cookie policy"
 }

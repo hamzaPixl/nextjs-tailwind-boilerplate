@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
 
-export default function Button({ message, link }) {
+export default function Button({ message, link, onClick }) {
   return (
     <button
+      onClick={onClick}
       className={`p-5 mr-2 transition-all hover:text-globalText hover:bg-background bg-globalText text-background md:font-bold text:xs md:text-base leading-normal rounded-md border-2 hover:border-globalText border-background`}
       type='submit'
     >
@@ -12,9 +13,10 @@ export default function Button({ message, link }) {
   )
 }
 
-export function InvertedButton({ message, link }) {
+export function InvertedButton({ message, link, onClick }) {
   return (
     <button
+      onClick={onClick}
       className={`p-5 mr-2 transition-all hover:text-background hover:bg-globalText bg-background text-globalText md:font-bold text:xs md:text-base leading-normal rounded-md border-2 hover:border-background`}
       type='submit'
     >

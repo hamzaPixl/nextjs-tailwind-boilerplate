@@ -4,6 +4,7 @@ import Container from './container'
 import Footer from './footer'
 import Header from './header'
 import MenuOverlay from './menu/overlay'
+import CookieBanner from './banners/cookie'
 
 export default function Layout({ children }) {
   const [navbarOpen, setNavbarOpen] = useState(false)
@@ -15,6 +16,7 @@ export default function Layout({ children }) {
         <MenuOverlay navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
         <Container>{children}</Container>
         <Footer navbarOpen={navbarOpen} />
+        <CookieBanner />
       </main>
     </>
   )
