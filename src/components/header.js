@@ -87,6 +87,7 @@ export default function Header({ navbarOpen, setNavbarOpen }) {
               } cursor-pointer ${navbarOpen && locale !== item && 'text-globalText/70'} ${
                 !navbarOpen && 'hover:text-background'
               } transition-all`}
+              href='#'
               onClick={(e) => {
                 switchLocale(e.target.text)
               }}
