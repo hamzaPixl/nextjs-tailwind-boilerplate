@@ -1,6 +1,7 @@
 {
   "keywords": [],
   "title": "Premier Art - Cabinet d'architecture",
+  "description": "Premier Art - Cabinet d'architecture, realise vos projets de vie.",
   "manifest": {
     "projectShortName": "Premier Art",
     "themeColor": "#ffffff",
@@ -88,6 +89,10 @@
     {
       "title": "Privacy Policy",
       "link": "https://www.preview.premierart.be/privacy-policy"
+    },
+    {
+      "title": "Terms Policy",
+      "link": "https://www.preview.premierart.be/terms-policy"
     },
     {
       "title": "Cookie Policy",
