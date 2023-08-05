@@ -34,7 +34,7 @@ export default function ContactForm({ formSuccess, handleSubmit, formError }) {
               <div className='flex flex-col justify-start'>
                 <label className='font-bold'>{t('contact.form.email')}</label>
                 <input
-                  type='text'
+                  type='email'
                   name='email'
                   className='border-2 focus:border-background focus:ring-background border-background/50 rounded-sm'
                 />

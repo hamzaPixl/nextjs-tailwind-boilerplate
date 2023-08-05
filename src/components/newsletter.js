@@ -39,7 +39,7 @@ export default function Newsletter() {
           <div className='w-full mt-10 md:mt-0 flex flex-col md:flex-row justify-between'>
             <input type='hidden' name='form-name' value='newsletter' />
             <input
-              type='text'
+              type='email'
               name='email'
               placeholder={t('newsletter.email.placeholder')}
               className='mb-5 md:mb-0 md:mr-10 border-2 bg-background text-globalText focus:border-globalText focus:ring-globalText border-globalText rounded-md'
