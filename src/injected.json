@@ -1,5 +1,5 @@
 {
-  "keywords": [],
+  "keywords": ["boilerplate", "nextjs", "tailwindcss", "react"],
   "title": "Nextjs boilderplate using tailwindcss",
   "description": "Nextjs boilderplate using tailwindcss",
   "manifest": {
@@ -13,12 +13,12 @@
   },
   "gtag": "G-xxxxxxxxxx",
   "colors": {
-    "global": "#227D89",
+    "global": "#000000",
     "globalText": "#ffffff",
     "highlight": "#FFE58A",
     "highlightText": "#000000",
     "overlay": "#000000",
-    "background": "#000000"
+    "background": "#76c0ab"
   },
   "pages": [
     {
