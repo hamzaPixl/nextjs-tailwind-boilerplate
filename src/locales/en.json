@@ -123,5 +123,8 @@
   "policy.cookie.text": "By using our website you consent to all cookies in accordance with our ",
   "policy.cookie.page": "Cookie policy",
   "policy.privacy.page": "Privacy policy",
-  "policy.terms.page": "Terms and Conditions"
+  "policy.terms.page": "Terms and Conditions",
+  "newsletter.form.success": "Your message has been sent successfully.",
+  "newsletter.form.error": "There was an error while processing your request.",
+  "newsletter.email.placeholder": "Your Email"
 }

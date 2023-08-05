@@ -9,13 +9,13 @@ export default function ContactForm({ formSuccess, handleSubmit, formError }) {
       <h1 className='text-lg md:text-3xl my-5 font-bold'>{t('contact.form.title')}</h1>
       <div className='text:md md:text-lg mb-10'>{t('contact.form.description')}</div>
       {formSuccess && (
-        <div className='text-lg bg-green-500 rounded-md text-globalText p-10'>
-          {t('contact.form.success')}
+        <div className='transition-all text-lg bg-green-500 rounded-md text-globalText p-10'>
+          {formSuccess.message}
         </div>
       )}
       {formError && (
-        <div className='text-lg bg-red-500 rounded-md text-globalText p-10'>
-          {t('contact.form.error')}
+        <div className='transition-all text-lg bg-red-500 rounded-md text-globalText p-10'>
+          {formError.message}
         </div>
       )}
       {
