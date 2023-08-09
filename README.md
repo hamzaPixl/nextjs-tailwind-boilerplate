@@ -94,3 +94,5 @@ Rachid Asli - rachid@clevertech.be
 # 23/07 - 3 hours
 
 - [x] multiple fix for responsive
+
+# august - 10 hours

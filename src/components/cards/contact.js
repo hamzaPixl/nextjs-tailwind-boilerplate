@@ -14,7 +14,7 @@ export default function ContactCard({ address, addressLink, phone, email, tva, c
       </div>
       <div className='pb-5 flex flex-col'>
         <Link href={`tel:${phone}`}>{phone}</Link>
-        <Link href={`mailto:${phone}`}>{email}</Link>
+        <Link href={`mailto:${email}`}>{email}</Link>
       </div>
       <div className='pb-5'>
         <div>TVA {tva}</div>
