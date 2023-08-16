@@ -95,9 +95,9 @@ Rachid Asli - rachid@clevertech.be
 
 - [x] multiple fix for responsive
 
-# august - 10 hours
+# august - 8 hours
 
-# 13/08 - 15/08 - 8
+# 13/08 - 15/08 - 9
 
 [x] design system
 [x] font fix
@@ -113,3 +113,4 @@ Rachid Asli - rachid@clevertech.be
 [x] fix contact page
 [x] fix about page
 [x] fix mission page
+[x] fix project detail page

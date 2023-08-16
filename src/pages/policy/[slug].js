@@ -18,10 +18,7 @@ export default function PolicyDetail() {
   return (
     <Layout>
       {policy && (
-        <div className='flex flex-wrap mt-20 md:mt-40'>
-          <h1 className='text-lg md:text-3xl font-semibold'>{t(`policy.${policy.name}.page`)}</h1>
-          <div className='w-full lg:w-8/12 px-4'></div>
-        </div>
+        <h1 className='text-xl md:text-4xl font-bold'>{t(`policy.${policy.name}.page`)}</h1>
       )}
     </Layout>
   )
