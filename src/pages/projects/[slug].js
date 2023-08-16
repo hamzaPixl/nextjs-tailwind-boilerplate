@@ -112,7 +112,7 @@ export default function ProjectDetail() {
                     className='cursor-pointer rounded-sm filter grayscale hover:grayscale-0 transition-all'
                     onClick={() => {
                       setFeaturedAfter(index)
-                      setFeaturedAfter(index)
+                      setFeaturedBefore(index)
                     }}
                     src={project?.afterImages?.[index]}
                     alt={`Feature after image ${index}`}
