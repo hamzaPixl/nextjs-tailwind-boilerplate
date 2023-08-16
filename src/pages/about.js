@@ -11,28 +11,24 @@ export default function About() {
   const { t } = useTranslate()
   return (
     <Layout>
-      <div className='w-full mb-20 md:mb-40'>
-        <AboutHero
-          backgroundImage={'/images/hero/hero-about.png'}
-          title={t('about.title')}
-          description={t('about.description')}
-          mainLink={'/contact'}
-          mainLinkText={t('about.hero.primaryAction')}
-          secondaryLink={'/contact'}
-          secondaryLinkText={t('about.hero.secondaryAction')}
-        />
-      </div>
+      <AboutHero
+        image={'/images/hero/hero-about.png'}
+        title={t('about.title')}
+        description={t('about.description')}
+        mainLink={'/contact'}
+        mainLinkText={t('about.hero.primaryAction')}
+        secondaryLink={'/contact'}
+        secondaryLinkText={t('about.hero.secondaryAction')}
+      />
 
-      <div className='w-full mt-10 md:mt-20 md:mb-[34rem]'>
-        <QuoteCard
-          quote={t('about.quote1.text')}
-          source={t('about.quote1.source')}
-          image={'/images/quote/jurica-koletic.png'}
-        />
-      </div>
+      <QuoteCard
+        quote={t('about.quote1.text')}
+        source={t('about.quote1.source')}
+        image={'/images/quote/jurica-koletic.png'}
+      />
 
-      <div className='w-full my-5'>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4 my-10 w-full'>
+      <div className='flex flex-col gap-2 justify-center py-10 items-center w-full'>
+        <div className='grid grid-flow-dense grid-cols-1 md:grid-cols-3 gap-6'>
           <TeamCard
             description={t('about.team.member1.description')}
             firstName={'Ricardo'}
@@ -57,22 +53,24 @@ export default function About() {
         </div>
       </div>
 
-      <div className='w-full my-5'>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 my-10 w-full'>
-          <div className='w-full relative h-[15rem] md:h-[32rem]'>
+      <div className='flex flex-col gap-2 justify-center py-10 items-center w-full'>
+        <div className='grid grid-flow-dense grid-cols-1 md:grid-cols-2 gap-4'>
+          <div className='w-full h-auto'>
             <Image
               loading='lazy'
-              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-              fill
+              sizes='100vw'
+              width={500}
+              height={500}
               alt='About 1 illustration'
               src={'/images/about/about1.png'}
             />
           </div>
-          <div className='w-full relative h-[15rem] md:h-[32rem]'>
+          <div className='w-full h-auto'>
             <Image
+              width={500}
+              height={500}
               loading='lazy'
-              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-              fill
+              sizes='100vw'
               alt='About 1 illustration'
               src={'/images/about/about1.png'}
             />
@@ -80,9 +78,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className='w-full md:mt-40'>
-        <Newsletter />
-      </div>
+      <Newsletter />
     </Layout>
   )
 }

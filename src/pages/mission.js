@@ -11,13 +11,12 @@ export default function Mission() {
   const { t } = useTranslate()
   return (
     <Layout>
-      <div className='w-full mb-40'>
-        <AboutHero
-          backgroundImage={'/images/hero/hero-mission.png'}
-          title={t('mission.title')}
-          description={t('mission.description')}
-        />
-      </div>
+      <AboutHero
+        image={'/images/hero/hero-mission.png'}
+        title={t('mission.title')}
+        description={t('mission.description')}
+      />
+
       <div className='w-full my-5 flex flex-col items-center'>
         {missions.map((_, i) => (
           <MissionCard
@@ -30,9 +29,8 @@ export default function Mission() {
           />
         ))}
       </div>
-      <div className='w-full md:mt-40'>
-        <Newsletter />
-      </div>
+
+      <Newsletter />
     </Layout>
   )
 }

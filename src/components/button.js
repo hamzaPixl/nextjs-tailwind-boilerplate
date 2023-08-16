@@ -5,7 +5,7 @@ export default function Button({ message, link, onClick }) {
   return (
     <button
       onClick={onClick}
-      className={`p-5 mr-2 transition-all hover:text-globalText hover:bg-background bg-globalText text-background md:font-bold text:xs md:text-base leading-normal rounded-md border-2 hover:border-globalText border-background`}
+      className={`p-5  transition-all ease-in-out duration-300 hover:text-white hover:bg-transparent bg-white text-primary-900 font-bold text:xs md:text-md leading-normal rounded-md border-2 border-white`}
       type='submit'
     >
       {link ? <Link href={link}>{message}</Link> : <span>{message}</span>}
@@ -17,7 +17,7 @@ export function InvertedButton({ message, link, onClick }) {
   return (
     <button
       onClick={onClick}
-      className={`p-5 mr-2 transition-all hover:text-background hover:bg-globalText bg-background text-globalText md:font-bold text:xs md:text-base leading-normal rounded-md border-2 hover:border-background`}
+      className={`p-5  transition-all ease-in-out duration-300 hover:text-primary-900 hover:bg-transparent bg-primary-900 text-white font-bold text:xs md:text-md leading-normal rounded-md border-2 border-primary-900`}
       type='submit'
     >
       {link ? <Link href={link}>{message}</Link> : <span>{message}</span>}

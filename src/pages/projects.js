@@ -22,16 +22,16 @@ export default function Projects() {
 
   return (
     <Layout>
-      <div className='self-baseline mb-10 w-full text-background'>
-        <div className='text-lg md:text-3xl font-bold mb-10'>{t('projects.title')}</div>
-        <div className='text-base font-normal mb-10'>{t('projects.description')}</div>
-        <div className='mb-5 md:mb-20 flex flex-col md:flex-row  text-background/50'>
+      <div className='flex flex-col flex-wrap gap-4 w-full'>
+        <div className='text-2xl xl:text-4xl font-bold'>{t('projects.title')}</div>
+        <div className='text-base font-normal max-w-2xl'>{t('projects.description')}</div>
+        <div className='flex flex-col md:flex-row text-primary-500'>
           {filters.map((item, index) => (
             <Link key={index} href={`/projects?filter=${item}`}>
               <div
                 className={`transition-all cursor-pointer text-base pr-5 mb-5 md:m-0 ${
-                  item === filter && 'font-bold underline underline-offset-8 text-background'
-                } hover:font-bold hover:underline-offset-8 hover:underline hover:text-background`}
+                  item === filter && 'font-bold underline underline-offset-8 text-primary-900'
+                } hover:font-bold hover:underline-offset-8 hover:underline hover:text-primary-900`}
               >
                 {t(`projects.filter.${item}`)}
               </div>
@@ -40,31 +40,15 @@ export default function Projects() {
         </div>
       </div>
 
-      <div className='grid grid-flow-dense grid-cols-2 md:grid-cols-3 gap-4 my-10 w-full'>
-        {projects.slice(0, 4).map((item, index) => (
-          <div className='grid gap-4' key={index}>
-            <ProjectCard project={item} />
-          </div>
-        ))}
-        {projects.slice(4, 8).map((item, index) => (
-          <div className='grid gap-4' key={index}>
-            <ProjectCard project={item} />
-          </div>
-        ))}
-        {projects.slice(8, 12).map((item, index) => (
-          <div className='grid gap-4' key={index}>
-            <ProjectCard project={item} />
-          </div>
-        ))}
-        {projects.slice(12, 16).map((item, index) => (
-          <div className='grid gap-4' key={index}>
-            <ProjectCard project={item} />
-          </div>
-        ))}
+      <div className='my-10 items-center w-full'>
+        <div className='grid grid-flow-dense grid-cols-1 md:grid-cols-3 gap-4'>
+          {projects.map((item, index) => (
+            <ProjectCard key={index} project={item} />
+          ))}
+        </div>
       </div>
-      <div className='w-full md:mt-40'>
-        <Newsletter />
-      </div>
+
+      <Newsletter />
     </Layout>
   )
 }

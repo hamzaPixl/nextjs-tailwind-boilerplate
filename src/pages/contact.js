@@ -33,23 +33,17 @@ export default function Contact() {
 
   return (
     <Layout>
-      <div className='w-full mb-20'>
-        <ContactHero
-          backgroundImage={`/images/hero/hero-about.png`}
-          address={injected.address.address}
-          addressLink={injected.address.url}
-          contactLink={'/contact'}
-          phone={injected.tel}
-          email={injected.email}
-          tva={injected.tva}
-        />
-      </div>
-      <div className='w-full my-5'>
-        <ContactForm handleSubmit={handleSubmit} formSuccess={formSuccess} formError={formError} />
-      </div>
-      <div className='w-full md:mt-40'>
-        <Newsletter />
-      </div>
+      <ContactHero
+        backgroundImage={`/images/hero/hero-about.png`}
+        address={injected.address.address}
+        addressLink={injected.address.url}
+        contactLink={'/contact'}
+        phone={injected.tel}
+        email={injected.email}
+        tva={injected.tva}
+      />
+      <ContactForm handleSubmit={handleSubmit} formSuccess={formSuccess} formError={formError} />
+      <Newsletter />
     </Layout>
   )
 }

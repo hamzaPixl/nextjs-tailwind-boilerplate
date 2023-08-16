@@ -6,10 +6,8 @@ import * as gtag from '../analytics'
 import './globals.css'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
-import { Montserrat } from 'next/font/google'
 import { useLocale } from '../hooks/useLocale'
 
-const font = Montserrat({ subsets: ['latin'] })
 config.autoAddCss = false
 
 export default function CustomApp({ Component, pageProps }) {
@@ -27,7 +25,7 @@ export default function CustomApp({ Component, pageProps }) {
   return (
     <QueryClientProvider client={queryClient}>
       <IntlProvider locale={locale} messages={messages}>
-        <Component {...pageProps} className={font.className} />
+        <Component {...pageProps} />
       </IntlProvider>
     </QueryClientProvider>
   )

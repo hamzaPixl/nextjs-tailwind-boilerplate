@@ -1,5 +1,6 @@
 import React from 'react'
 import AboutCard from '../cards/about'
+import Image from 'next/image'
 
 export default function AboutHero({
   title,
@@ -8,14 +9,21 @@ export default function AboutHero({
   mainLinkText,
   secondaryLink,
   secondaryLinkText,
-  backgroundImage,
+  image,
 }) {
   return (
-    <div
-      className='bg-background md:p-10 w-full bg-[image:var(--image-url)] bg-cover bg-center bg-no-repeat relative h-[38em]'
-      style={{ '--image-url': `url(${backgroundImage})` }}
-    >
-      <div className='absolute -bottom-20'>
+    <div className='w-full md:relative mb-20'>
+      <div className='w-full self-stretch'>
+        <Image
+          className='w-full'
+          width={500}
+          height={540}
+          sizes='100vw'
+          alt='Project hero illustration'
+          src={image}
+        />
+      </div>
+      <div className='md:absolute py-8 md:px-10 md:-bottom-20'>
         <AboutCard
           title={title}
           description={description}

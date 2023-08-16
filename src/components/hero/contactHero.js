@@ -1,5 +1,6 @@
 import React from 'react'
 import ContactCard from '../cards/contact'
+import Image from 'next/image'
 
 export default function ContactHero({
   address,
@@ -11,11 +12,18 @@ export default function ContactHero({
   backgroundImage,
 }) {
   return (
-    <div
-      className='bg-background md:p-10 w-full bg-[image:var(--image-url)] bg-cover bg-center bg-no-repeat relative h-[52em] md:h-[38em]'
-      style={{ '--image-url': `url(${backgroundImage})` }}
-    >
-      <div className='absolute md:-bottom-20 md:right-20 bottom-0'>
+    <div className='w-full md:relative mb-20'>
+      <div className='w-full self-stretch'>
+        <Image
+          className='w-full'
+          width={500}
+          height={540}
+          sizes='100vw'
+          alt='Project hero illustration'
+          src={backgroundImage}
+        />
+      </div>
+      <div className='md:absolute md:px-10 bottom-0 md:-bottom-20 md:right-20'>
         <ContactCard
           address={address}
           addressLink={addressLink}

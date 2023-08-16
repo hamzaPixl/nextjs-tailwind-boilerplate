@@ -10,12 +10,12 @@ export default function AboutCard({
   secondaryLinkText,
 }) {
   return (
-    <div className={`bg-globalText flex flex-col justify-between items-left p-4 md:p-10`}>
-      <div className='text-background  max-w-xl py-5'>
-        <div className='text-lg md:text-3xl font-bold pb-5'>{title}</div>
-        <div className='text:xs md:text-base font-normal leading-normal'>{description}</div>
+    <div className={`bg-white flex gap-3 flex-col justify-between items-left md:p-12`}>
+      <div className='text-primary-900 flex flex-col flex-wrap items-start gap-3'>
+        <div className='text-3xl md:text-4xl font-bold'>{title}</div>
+        <div className='text-base max-w-xl'>{description}</div>
       </div>
-      <div className='flex flex-row justify-start'>
+      <div className='flex flex-row justify-start gap-2'>
         {mainLink && mainLinkText && <InvertedButton message={mainLinkText} link={mainLink} />}
         {secondaryLink && secondaryLinkText && (
           <Button message={secondaryLinkText} link={secondaryLink} />

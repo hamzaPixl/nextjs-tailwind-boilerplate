@@ -1,5 +1,6 @@
 import React from 'react'
 import AboutCard from './cards/about'
+import Image from 'next/image'
 
 export default function MoreAbout({
   title,
@@ -8,14 +9,21 @@ export default function MoreAbout({
   mainLinkText,
   secondaryLink,
   secondaryLinkText,
-  backgroundImage,
+  image,
 }) {
   return (
-    <div
-      className='bg-background md:p-10 w-full md:w-4/5 bg-[image:var(--image-url)] bg-cover bg-center bg-no-repeat relative md:h-[38em] h-[60em]'
-      style={{ '--image-url': `url(${backgroundImage})` }}
-    >
-      <div className='absolute md:-right-80 md:-bottom-40 bottom-0 mb-10'>
+    <div className='w-full md:relative my-20 flew flex-col'>
+      <div className='w-full xl:w-2/3 self-stretch'>
+        <Image
+          className='w-full'
+          width={500}
+          height={540}
+          sizes='100vw'
+          alt='Project hero illustration'
+          src={image}
+        />
+      </div>
+      <div className='xl:absolute py-8 xl:px-10 xl:-bottom-20 xl:right-1'>
         <AboutCard
           title={title}
           description={description}

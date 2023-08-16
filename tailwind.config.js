@@ -1,5 +1,3 @@
-import injected from './src/injected.json'
-
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,7 +6,17 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    fontSize: {
+      xs: '12px',
+      sm: '14px',
+      base: '16px',
+      xl: '20px',
+      '2xl': '24px',
+      '3xl': '30px',
+      '4xl': '36px',
+    },
     fontFamily: {
+      wix: 'Wix Madefor Display',
       sans: [
         'Inter',
         'ui-sans-serif',
@@ -55,12 +63,26 @@ module.exports = {
       ],
     },
     colors: {
-      global: injected.colors.global,
-      globalText: injected.colors.globalText,
-      highilight: injected.colors.highilight,
-      highilightText: injected.colors.highilightText,
-      background: injected.colors.background,
-      overlay: injected.colors.overlay,
+      'gray-50': '#F9FAFB',
+      'gray-100': '#F3F4F6',
+      'gray-200': '#E5E7EB',
+      'gray-300': '#D1D5DB',
+      'gray-400': '#9CA3AF',
+      'gray-500': '#6B7280',
+      'gray-600': '#4B5563',
+      'gray-700': '#374151',
+      'gray-800': '#1F2A37',
+      'gray-900': '#111928',
+      'primary-50': '#EEEEEE',
+      'primary-100': '#E0E0E0',
+      'primary-200': '#C4C4C4',
+      'primary-300': '#A8A8A8',
+      'primary-400': '#8C8C8C',
+      'primary-500': '#707070',
+      'primary-600': '#545454',
+      'primary-700': '#383838',
+      'primary-800': '#1C1C1C',
+      'primary-900': '#000000',
     },
     extend: {
       display: ['group-hover'],

@@ -13,50 +13,38 @@ export default function Home() {
   const { t } = useTranslate()
   return (
     <Layout>
-      <div className='w-full mb-40'>
-        <AboutHero
-          backgroundImage={'/images/hero/hero-about.png'}
-          title={t('home.title')}
-          description={t('home.description')}
-          mainLink={'/contact'}
-          mainLinkText={t('home.hero.primaryAction')}
-        />
-      </div>
+      <AboutHero
+        image={'/images/hero/hero-about.png'}
+        title={t('home.title')}
+        description={t('home.description')}
+        mainLink={'/contact'}
+        mainLinkText={t('home.hero.primaryAction')}
+      />
 
-      <div className='w-full my-5'>
-        <div className='grid grid-cols-2 md:grid-cols-3 gap-4 my-10 w-full'>
+      <div className='flex flex-col gap-2 justify-center py-10 items-center w-full'>
+        <div className='grid grid-flow-dense grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-10'>
           {allProjects.slice(0, 3).map((item, index) => (
-            <div key={index}>
-              <ProjectCard project={item} />
-            </div>
+            <ProjectCard key={index} project={item} />
           ))}
         </div>
-        <div className='flex justify-center my-10'>
-          <InvertedButton link='/projects' message={t('home.projects')} />
-        </div>
+        <InvertedButton link='/projects' message={t('home.projects')} />
       </div>
 
-      <div className='w-full mt-10 md:mt-20 md:mb-[34rem]'>
-        <QuoteCard
-          quote={t('about.quote1.text')}
-          source={t('about.quote1.source')}
-          image={'/images/quote/jurica-koletic.png'}
-        />
-      </div>
+      <QuoteCard
+        quote={t('about.quote1.text')}
+        source={t('about.quote1.source')}
+        image={'/images/quote/jurica-koletic.png'}
+      />
 
-      <div className='w-full my-20'>
-        <MoreAbout
-          backgroundImage={'/images/hero/hero-about.png'}
-          title={t('home.about.title')}
-          description={t('home.about.description')}
-          mainLink={'/about'}
-          mainLinkText={t('home.about.primaryAction')}
-        />
-      </div>
+      <MoreAbout
+        image={'/images/hero/hero-about.png'}
+        title={t('home.about.title')}
+        description={t('home.about.description')}
+        mainLink={'/about'}
+        mainLinkText={t('home.about.primaryAction')}
+      />
 
-      <div className='w-full md:mt-40'>
-        <Newsletter />
-      </div>
+      <Newsletter />
     </Layout>
   )
 }

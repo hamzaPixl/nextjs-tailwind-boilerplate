@@ -3,51 +3,38 @@ import injected from '../injected.json'
 import Image from 'next/image'
 import { useLocale } from '../hooks/useLocale'
 import Link from 'next/link'
+import Burger from './svg/burger'
+import { useScrollPosition } from '../hooks/useScrollPostition'
 
 export default function Header({ navbarOpen, setNavbarOpen }) {
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+  }
+
+  const scrollPosition = useScrollPosition()
   const { switchLocale, locale } = useLocale()
   return (
     <nav
-      className={`sticky top-0 z-50 w-screen ${
-        navbarOpen ? 'bg-background text-globalText' : 'bg-globalText text-background'
-      }`}
+      className={classNames(
+        scrollPosition > 0 ? 'sm:py-10 py-[20px]' : 'sm:py-20 py-[20px]',
+        navbarOpen ? 'bg-primary-900 text-white' : 'bg-white text-primary-900',
+        'z-50 sticky top-0 mx-auto overflow-auto transition-all duration-300 ease-in-out',
+      )}
     >
       <div
-        className={`md:max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4  text-xs md:text-md  font-bold leading-normal`}
+        className={`max-w-screen-xl 2xl:max-w-screen-2xl px-6 md:px-16 flex gap-2 flex-wrap items-center justify-between mx-auto text-sm font-bold leading-normal`}
       >
         <Link
           href={'/'}
-          className='w-5 h-5 md:w-10 md:h-10 relative'
+          className='relative'
           onClick={(e) => {
             e.preventDefault()
             setNavbarOpen(!navbarOpen)
           }}
         >
-          <div className='absolute w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2'>
-            <span
-              className={`absolute h-0.5 w-5 ${
-                !navbarOpen ? 'bg-background' : 'bg-globalText'
-              } transform transition duration-300 ease-in-out ${
-                navbarOpen ? 'rotate-45 delay-200' : '-translate-y-1.5'
-              }`}
-            ></span>
-            <span
-              className={`absolute h-0.5 ${
-                !navbarOpen ? 'bg-background' : 'bg-globalText'
-              } transform transition-all duration-200 ease-in-out ${
-                navbarOpen ? 'w-0 opacity-50' : 'w-5 delay-200 opacity-100'
-              }`}
-            ></span>
-            <span
-              className={`absolute h-0.5 w-5 ${
-                !navbarOpen ? 'bg-background' : 'bg-globalText'
-              } transform transition duration-300 ease-in-out ${
-                navbarOpen ? '-rotate-45 delay-200' : 'translate-y-1.5'
-              }`}
-            ></span>
-          </div>
+          <Burger navbarOpen={navbarOpen} />
         </Link>
-        <Link href={'/'} className='w-36 h-16 md:w-64 md:h-36 relative'>
+        <Link href={'/'} className='w-[138px] h-[72px] sm:w-[216px] sm:h-[112px] relative'>
           <Image
             loading='lazy'
             fill
@@ -58,19 +45,19 @@ export default function Header({ navbarOpen, setNavbarOpen }) {
             }}
           />
         </Link>
-        <div className='md:hidden'>
+        <div className='sm:hidden'>
           <select
             onChange={(e) => {
               switchLocale(e.target.value)
             }}
             className={`[&:not(size)]:bg-none [&:not(size)]:border-none [&:not(size)]:p-0 ${
-              navbarOpen ? 'bg-background' : 'bg-globalText'
+              !navbarOpen ? 'text-primary-900 bg-white' : 'text-white bg-primary-900'
             }`}
           >
             {injected.locales.map((item, index) => (
               <option
                 key={index}
-                className={`uppercase ${!navbarOpen ? 'text-background' : 'text-globalText'}`}
+                className={`uppercase ${!navbarOpen ? 'text-primary-900' : 'text-white'}`}
                 value={item}
               >
                 {item.toUpperCase()}
@@ -78,15 +65,15 @@ export default function Header({ navbarOpen, setNavbarOpen }) {
             ))}
           </select>
         </div>
-        <div className='hidden md:block uppercase'>
+        <div className='hidden sm:flex sm:flex-row sm:flex-wrap sm:gap-2'>
           {injected.locales.map((item, index) => (
             <a
               key={index}
-              className={`pr-2 ${locale === item ? 'text-background' : 'text-background/50'} ${
-                navbarOpen && 'text-globalText'
-              } cursor-pointer ${navbarOpen && locale !== item && 'text-globalText/70'} ${
-                !navbarOpen && 'hover:text-background'
-              } transition-all`}
+              className={`${locale === item ? 'text-primary-900' : 'text-gray-400'} ${
+                navbarOpen && 'text-white'
+              } cursor-pointer ${navbarOpen && locale !== item && 'text-gray-400'} ${
+                !navbarOpen && 'hover:text-primary-900'
+              } transition-all uppercase`}
               href='#'
               onClick={(e) => {
                 switchLocale(e.target.text)
