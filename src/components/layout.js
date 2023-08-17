@@ -1,21 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import SEO from './seo'
 import Container from './container'
 import Footer from './footer'
 import Header from './header'
-import MenuOverlay from './menu/overlay'
 import CookieBanner from './banners/cookie'
 
 export default function Layout({ children }) {
-  const [navbarOpen, setNavbarOpen] = useState(false)
   return (
     <>
       <main>
         <SEO />
-        <Header navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
-        <MenuOverlay navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
+        <Header />
         <Container>{children}</Container>
-        <Footer navbarOpen={navbarOpen} />
+        <Footer />
         <CookieBanner />
       </main>
     </>

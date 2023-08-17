@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function ContactCard({ address, addressLink, phone, email, tva, contactLink }) {
   const { t } = useTranslate()
   return (
-    <div className='p-10 bg-primary-900 text-white gap-4 flex flex-col justify-around items-left font-normal text-base text-white'>
+    <div className='p-10 bg-primary-900 text-white gap-4 flex flex-col justify-around items-left font-normal text-base'>
       <div className='text-xl md:text-3xl font-bold'>{t('contact.card.title')}</div>
       <div className='flex flex-col gap-2'>
         <div>{address}</div>
