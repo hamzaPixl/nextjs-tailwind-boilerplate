@@ -3,22 +3,29 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import manifest from '../../public/manifest.json'
 import injected from '../injected.json'
+import { useTranslate } from '../hooks/useTranslate'
 
 const defaultMeta = {
   type: 'website',
   robots: 'follow, index',
 }
 
-export default function SEO({ image, twitter }) {
+export default function SEO() {
+  const { t } = useTranslate()
+  const router = useRouter()
+
+  const pageInfo = injected.pages.find((page) => page.link === router.route)
+
   const themeColor = injected.manifest.themeColor
-  const description = injected.description
-  const author = injected.author.name
-  const meta = [{ keywords: injected.keywords }]
-  const title = injected.title
   const name = injected.manifest.projectShortName
+  const author = injected.author.url
   const url = injected.manifest.url
 
-  const router = useRouter()
+  const image = pageInfo?.image || injected.manifest.icon
+  const meta = [{ name: 'keywords', content: injected.keywords.concat(pageInfo?.meta?.keywords) }]
+  const title = t(pageInfo?.meta?.title) || injected.title
+  const description = t(pageInfo?.meta?.description) || injected.description
+
   const metaData = [
     {
       name: 'robots',
@@ -63,7 +70,7 @@ export default function SEO({ image, twitter }) {
     },
     {
       name: `twitter:site`,
-      content: twitter,
+      content: `${url}${router.asPath}`,
     },
     {
       name: `twitter:creator`,
@@ -110,10 +117,10 @@ export default function SEO({ image, twitter }) {
       ))}
       <link rel='canonical' href={`${url}${router.asPath}`} />
       <link rel='alternate' href={`${url}${router.asPath}`} hrefLang='x-default' />
-      <link rel='alternate' href={`${url}${router.asPath}`} hrefLang='en' />
-      <link rel='alternate' href={`${url}${router.asPath}/en`} hrefLang='en' />
-      <link rel='alternate' href={`${url}${router.asPath}/fr`} hrefLang='fr' />
-      <link rel='alternate' href={`${url}${router.asPath}/nl`} hrefLang='nl' />
+      <link rel='alternate' href={`${url}${router.asPath}`} hrefLang={injected.defaultLocale} />
+      {injected.locales.map((item, index) => (
+        <link key={index} rel='alternate' href={`${url}${router.asPath}/${item}`} hrefLang={item} />
+      ))}
     </Head>
   )
 }

@@ -25,8 +25,8 @@
       "title": "link.home",
       "link": "/",
       "meta": {
-        "title": "home.title",
-        "description": "home.description",
+        "title": "home.meta.title",
+        "description": "home.meta.description",
         "keywords": []
       }
     },
@@ -34,36 +34,36 @@
       "title": "link.about",
       "link": "/about",
       "meta": {
-        "title": "about.title",
-        "description": "about.description",
-        "keywords": []
+        "title": "about.meta.title",
+        "description": "about.meta.description",
+        "keywords": ["about"]
       }
     },
     {
       "title": "link.mission",
       "link": "/mission",
       "meta": {
-        "title": "mission.title",
-        "description": "mission.description",
-        "keywords": []
+        "title": "mission.meta.title",
+        "description": "mission.meta.description",
+        "keywords": ["mission", "values"]
       }
     },
     {
       "title": "link.projects",
       "link": "/projects",
       "meta": {
-        "title": "projects.title",
-        "description": "projects.description",
-        "keywords": []
+        "title": "projects.meta.title",
+        "description": "projects.meta.description",
+        "keywords": ["projects"]
       }
     },
     {
       "title": "link.contact",
       "link": "/contact",
       "meta": {
-        "title": "contact.title",
-        "description": "contact.description",
-        "keywords": []
+        "title": "contact.meta.title",
+        "description": "contact.meta.description",
+        "keywords": ["contact", "newsletter", "form"]
       }
     }
   ],
@@ -107,6 +107,7 @@
   "email": "example@example.com",
   "tva": "BE 0000 000 000",
   "locales": ["fr", "nl", "en"],
+  "defaultLocale": "en",
   "author": {
     "name": "Clevertech",
     "url": "https://www.clevertech.be"

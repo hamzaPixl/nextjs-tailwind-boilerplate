@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { GtagScript, GA_TRACKING_ID } from '../analytics'
+import injected from '../injected.json'
 
 export default class CustomDocument extends Document {
   static async getInitialProps(ctx) {
@@ -9,7 +10,7 @@ export default class CustomDocument extends Document {
 
   render() {
     return (
-      <Html lang='en'>
+      <Html lang={injected.defaultLocale}>
         <Head />
         {GA_TRACKING_ID && <GtagScript />}
         <body>

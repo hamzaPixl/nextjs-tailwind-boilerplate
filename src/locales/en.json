@@ -1,6 +1,17 @@
 {
   "title": "Welcome to Nextjs boilerplate from Clevertech",
 
+  "home.meta.title": "Welcome to Nextjs boilerplate from Clevertech",
+  "home.meta.description": "Welcome to Nextjs boilerplate from Clevertech",
+  "contact.meta.title": "Contact us",
+  "contact.meta.description": "Contact us",
+  "mission.meta.title": "Our mision and values",
+  "mission.meta.description": "Our mision and values",
+  "about.meta.title": "More about us",
+  "about.meta.description": "More about us",
+  "projects.meta.title": "Our projects",
+  "projects.meta.description": "Our projects",
+
   "link.home": "Home",
   "link.about": "About us",
   "link.mission": "Mission",

@@ -10,6 +10,8 @@ const messages = {
   fr,
 }
 
+import injected from '../injected.json'
+
 export const useLocale = () => {
   const router = useRouter()
 
@@ -26,5 +28,9 @@ export const useLocale = () => {
     },
     [router],
   )
-  return { locale: router.locale || 'en', switchLocale, messages: flattenedMessages }
+  return {
+    locale: router.locale || injected.defaultLocale,
+    switchLocale,
+    messages: flattenedMessages,
+  }
 }

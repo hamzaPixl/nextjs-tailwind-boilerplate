@@ -1,6 +1,7 @@
 const withPlugins = require('next-compose-plugins')
 const optimizedImages = require('next-optimized-images')
 const withImages = require('next-images')
+const injected = require('./src/injected.json')
 
 const withPWA = require('next-pwa')({
   dest: 'public',
@@ -11,7 +12,7 @@ const withPWA = require('next-pwa')({
 
 module.exports = withPlugins([optimizedImages, withPWA, withImages], {
   i18n: {
-    locales: ['en', 'nl', 'fr'],
-    defaultLocale: 'en',
+    locales: injected.locales,
+    defaultLocale: injected.defaultLocale,
   },
 })
